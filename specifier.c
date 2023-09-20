@@ -30,7 +30,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 
 	while (specifiers[i].specifier)
 	{
-		if (*S == specifiers[i].specifier[0])
+		if (*s == specifiers[i].specifier[0])
 		{
 			return (specifiers[i].f);
 		}
@@ -51,7 +51,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 {
 	int (*f)(va_list, params_t *) = get_specifier(s);
 
-	if (F)
+	if (f)
 		return (f(ap, params));
 	return (0);
 }
