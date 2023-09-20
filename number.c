@@ -29,7 +29,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 	*ptr = '\0';
 
 	do {
-		*--ptr = arr[n % base];
+		*--ptr = arr[x % base];
 		x /= base;
 	} while (x != 0);
 
